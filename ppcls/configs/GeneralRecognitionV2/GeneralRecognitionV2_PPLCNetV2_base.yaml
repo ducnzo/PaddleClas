@@ -96,7 +96,7 @@ DataLoader:
     dataset:
       name: ImageNetDataset
       # image_root: d:\product_recognition\product_10k\train
-      image_root: d:\product_recognition\product_10k\train
+      image_root: /mnt/data/product_recognition/product_10k/train
       cls_label_path: ./train_list.txt
       relabel: True
       transform_ops:
@@ -146,7 +146,8 @@ DataLoader:
     Query:
       dataset:
         name: VeriWild
-        image_root: d:\product_recognition\product_10k\train
+        # image_root: d:\product_recognition\product_10k\train
+        image_root: /mnt/data/product_recognition/product_10k/train
         cls_label_path: ./val_list.txt
         transform_ops:
           - DecodeImage:
@@ -174,7 +175,8 @@ DataLoader:
     Gallery:
       dataset:
         name: VeriWild
-        image_root: d:\product_recognition\product_10k\test
+        # image_root: d:\product_recognition\product_10k\test
+        image_root: /mnt/data/product_recognition/product_10k/test
         cls_label_path: ./test_list.txt
         transform_ops:
           - DecodeImage:
